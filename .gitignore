@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+
+# Environment variables
+.env
+.env.*.local
+
+
+# IDE settings
+.vscode/
+.idea/
+
