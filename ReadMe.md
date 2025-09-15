@@ -237,11 +237,11 @@ npm start
 
 ### Docker command
 ```bash
-# Install dependencies
-npm install
+# Build and start containers (rebuild if images have changed)
+docker-compose up --build
 
-# Run locally (without Docker)
-npm start
+# Stop and remove containers, networks, and default volumes
+docker-compose down
 ```
 
 ---
