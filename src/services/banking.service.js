@@ -26,7 +26,7 @@ class BankingService {
             return this.cachedAssertion;
         }
 
-        const privateKey = process.env.PRIVATE_KEY.replace(/\\n/g, "\n");
+        const privateKey = Buffer.from(process.env.PRIVATE_KEY, 'base64').toString('utf-8');
 
         const expiryDate = process.env.SAVE_HAVEN_EXPIRY_DATE
             ? new Date(process.env.SAVE_HAVEN_EXPIRY_DATE)

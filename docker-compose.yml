@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   mongo_db:
-    container_name: database_container
+    container_name: mongo_db
     image: mongo:latest
     restart: always
     ports:
@@ -11,6 +11,7 @@ services:
       - mongo_db:/data/db
   app:
     build: .
+    image: opeoluwaogungbeni/maxim-backend:latest
     ports:
       - 5060:5050
     env_file:
